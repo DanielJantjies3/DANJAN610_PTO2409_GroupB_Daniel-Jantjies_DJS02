@@ -16,14 +16,21 @@ form.addEventListener("submit", (event) => {
 const numDividend = Number(dividend);
 const numDivider = Number(divider);
 
-//Check for Valid Numerical Inputs
+//Check for Valid Numerical Input Values
 if(isNaN(numDividend) || isNaN(numDivider)) {
   document.body.innerText = "Non-numeric value entered. Please reload the page and try again.";
   console.error(new Error("Invalid Input: Non-Numeric value entered."));
   return;
 }
 
+//Division Operation
+if(numDivider ===0) {
+  result.innerText = "Division not performed. Invalid number provided. Try again.";
+  console.error(new Error("Division by zero error"));
+  return;
+}
 
-
+//Display Whole Number
+result.innerText = Math.floor(numDividend / numDivider);
 
 });
