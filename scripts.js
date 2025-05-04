@@ -12,10 +12,16 @@ form.addEventListener("submit", (event) => {
   return;
 }
 
-//Check and Validation (If inputs are numeric)
+//Conversions , Check and Validation (If inputs are numeric)
 const numDividend = Number(dividend);
 const numDivider = Number(divider);
 
+//Check for Valid Numerical Inputs
+if(isNaN(numDividend) || isNaN(numDivider)) {
+  document.body.innerText = "Non-numeric value entered. Please reload the page and try again.";
+  console.error(new Error("Invalid Input: Non-Numeric value entered."));
+  return;
+}
 
 
 
