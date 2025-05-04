@@ -12,4 +12,12 @@ form.addEventListener("submit", (event) => {
   return;
 }
 
+//Check and Validation (If inputs are numeric)
+const numDividend = Number(dividend);
+const numDivider = Number(divider);
+
+
+
+
+
 });
